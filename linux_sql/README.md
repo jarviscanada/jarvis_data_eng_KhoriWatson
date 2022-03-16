@@ -6,7 +6,7 @@ Code block that shows how to run the project
 # Implementation (:TO DO)
 Discussion of project implementation
 ## Architecture
-[insert image of project here]
+![image](./assets/linux_proj_arch.png)
 ## Scripts (:TO DO)
 Shell Script description and usage (code block again)
 ## DB Modeling (:TO DO)
