@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS host_info (
 
 CREATE TABLE IF NOT EXISTS host_usage (
     "timestamp" TIMESTAMP NOT NULL,
-    host_id INTEGER NOT NULL UNIQUE,
+    host_id INTEGER NOT NULL,
     memory_free INTEGER NOT NULL,
     cpu_idle INTEGER NOT NULL,
     cpu_kernel INTEGER NOT NULL,
