@@ -3,7 +3,7 @@
 This project is a simulation of a real-time hardware monitoring agent. 
 It consists of 3 bash scripts and 2 SQL files that collectively provision a Docker container running a PostgreSQL image and populate a database with host hardware information and real-time host usage data updated automatically via a crontab job. The information in the database can then be queried to draw various insights including those surrounding the allocation of computing resources across the hosts on the network, demonstrate whether the network of servers is being used to its full potential or is in need of an expansion, and even detect if a host failure. The end user of a product based on this project could be any individual or group tasked with managing a cluster of servers and that therefore needs up-to-date information about resource utilization. Version Control for this project was handle through Git using a GitFlow framework to ensure that feature development and release ready code remain properly segregated and organized.
 # Quick Start
-Code block that shows how to run the project
+Enter the following commands one after another into a terminal, substituting the placeholder values in brackets with the desired ones.
 ```
 ./scripts/psql_docker create [username] [password]
 
@@ -24,8 +24,7 @@ crontab -e
 Implementation for this project began with the development of the `psql_docker.sh` script used to start or stop the Docker container or provision one if it's currently nonexistent. The script centers on a case statement that governs the interpretation of the command line arguments based on whether the user intended to start/stop or create a new container. Error checking is done to ensure the correct number of arguments are passed to the script call and prevent the script from creating a container that already exists or from starting/stopping one that doesn't. Next, in the `ddl.sql` file, the schemas for the tables that store the host information and the host usage data were created based on what information we wanted to keep track of through this project. Afterward, the two main scripts that function as the backbone of this project `host_info.sh` and `host_usage.sh` were created. Both scripts parse the output of various bash commands that gather hardware information like `lscpu` and `vmstat` using `grep` and `awk` to extract all relevant values. They then construct an SQL statement to insert that data into the relevant schema and then connect to the correct database using the command line arguments provided. Next, a crontab job was created to automate the collection of real-time host usage data every minute.
 ## Architecture
 ![image](./assets/linux_proj_arch.png)
-## Scripts (:TO DO)
-Shell Script description and usage (code block again)
+## Scripts
 `./psql_docker`
 
 This script has three modes: `start`, `stop`, and `create`. `start` and `stop` both require 0 additional command-line arguments beyond specifying the mode, whereas `create` takes a username and a password used to set up the PostgreSQL instance within the container. The script exits with status code 0 upon successfully starting, stopping, or creating the Docker container. The script exits with exit code 1 when attempting to start or stop a container that doesn't exist or to create a container that already does. After running this command you can use `docker ps -a` to check if the container is running.
@@ -77,6 +76,6 @@ Each script and file was tested individually upon completion. As the project was
 The source code for the project is hosted on GitHub but the actual Docker image for the project is not hosted on Docker Hub. A crontab job is used to automate some of the data collection via the `host_usage.sh` script. 
 
 # Improvements
-- Right now the `host_info.sh` script only checks for the hardware specifications once and cannot automatically detect host hardware updates or even insert them automatically if the `host_info.sh` command is run again (it cannot be updated because that is not the command in the script and it also cannot be just inserted afterward due to the uniqueness constraint on the `id` field).
+- Right now the `host_info.sh` script only checks for the hardware specifications once and cannot automatically detect host hardware updates or even insert them automatically if the `host_info.sh` command is run again (it cannot be updated because that is not the command in the script and it also cannot just be inserted afterward due to the uniqueness constraint on the `id` field).
 - There are several gaps in terms of how seamless the setup of the project is. For example, the actual creation of the `host_agent` database happens outside of any script. Integrating the scripts more with one another and closing those gaps would make the project more user-friendly.
 - Currently, host failure is only detected after the fact via a user-initiated SQL query. This could be improved by notifying the user actively if there has been a host that has been down for a considerable amount of time instead of allowing them to fail silently.
