@@ -6,10 +6,10 @@
         "Dean's List (2015, 2016): Ut enim ad minim veniam",
         "GPA: 3.8/4.0"
       ],
-      "degree": "Bachelor of Applied Sciences",
-      "department": "Electrical and Computer Engineering",
-      "duration": "2012-2016",
-      "school_name": "XYZ university"
+      "degree": "Bachelor of Science",
+      "department": "Department of Computer Science",
+      "duration": "2016-2021",
+      "school_name": "University of Toronto"
     },
     {
       "awards_achievements": null,
@@ -24,7 +24,7 @@
     {
       "description": "Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.",
       "git_url": "https://github.com/jarviscanada/jarvis_profile_builder",
-      "name": "Web app for resturant"
+      "name": "Web app for restaurant"
     },
     {
       "description": "Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.",
@@ -99,15 +99,21 @@
   "professional_experience": [
     {
       "company": "Jarvis",
-      "description": "Donec mattis sed justo et sagittis. Vestibulum lacinia nulla ipsum. Curabitur imperdiet nibh vitae leo lacinia laoreet. Nullam accumsan, lectus ut maximus ultricies, augue justo egestas mi, vel bibendum felis.",
+      "description": "Designed and implemented code to satisfy user requirements using Java, SQL, and Docker.",
       "duration": "2020-present",
       "title": "Software Developer"
     },
     {
-      "company": "XYZ Company",
-      "description": "Donec mattis sed justo et sagittis. Vestibulum lacinia nulla ipsum. Curabitur imperdiet nibh vitae leo lacinia laoreet. Nullam accumsan, lectus ut maximus ultricies, augue justo egestas mi, vel bibendum felis.",
-      "duration": "2019",
-      "title": "Tutor"
+      "company": "University of Toronto Libraries",
+      "description": "Provided virtual technical support services for a wide variety of systems at one of Canada's largest universities using powerful ticketing and time management tools to organize and resolve large volumes of daily tasks and requests.",
+      "duration": "2021",
+      "title": "Assitant Help Desk Advisor"
+    },
+    {
+      "company": "University of Toronto Libraries",
+      "description": "Delivered excellent customer service in a fast- paced, front-line customer service position at the main information desk of one of the largest libraries in Canada.",
+      "duration": "2017-2020",
+      "title": "Student Library Assistant"
     }
   ],
   "skills": {

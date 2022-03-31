@@ -65,7 +65,7 @@ jarvis_projects:
 # Feel free to add more projects
 highlighted_projects:
     #project name
-  - name: "Web app for resturant"
+  - name: "Web app for restaurant"
     #URL is optional
     git_url: "https://github.com/jarviscanada/jarvis_profile_builder"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
@@ -83,18 +83,22 @@ professional_experience:
     company: "Jarvis"
     duration: "2020-present"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: "Donec mattis sed justo et sagittis. Vestibulum lacinia nulla ipsum. Curabitur imperdiet nibh vitae leo lacinia laoreet. Nullam accumsan, lectus ut maximus ultricies, augue justo egestas mi, vel bibendum felis."
-  - title: "Tutor"
-    company: "XYZ Company"
-    duration: "2019"
-    description: "Donec mattis sed justo et sagittis. Vestibulum lacinia nulla ipsum. Curabitur imperdiet nibh vitae leo lacinia laoreet. Nullam accumsan, lectus ut maximus ultricies, augue justo egestas mi, vel bibendum felis."
+    description: "Designed and implemented code to satisfy user requirements using Java, SQL, and Docker."
+  - title: "Assitant Help Desk Advisor"
+    company: "University of Toronto Libraries"
+    duration: "2021"
+    description: "Provided virtual technical support services for a wide variety of systems at one of Canada's largest universities using powerful ticketing and time management tools to organize and resolve large volumes of daily tasks and requests."
+  - title: "Student Library Assistant"
+    company: "University of Toronto Libraries"
+    duration: "2017-2020"
+    description: "Delivered excellent customer service in a fast- paced, front-line customer service position at the main information desk of one of the largest libraries in Canada."
 
 #List of edcuation
 education: 
-  - school_name: "XYZ university"
-    duration: "2012-2016"
-    degree: "Bachelor of Applied Sciences"
-    department: "Electrical and Computer Engineering"
+  - school_name: "University of Toronto"
+    duration: "2016-2021"
+    degree: "Bachelor of Science"
+    department: "Department of Computer Science"
     # optional
     awards_achievements: 
       - "Scholarship"
