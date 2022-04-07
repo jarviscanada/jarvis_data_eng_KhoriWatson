@@ -10,12 +10,39 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import org.apache.log4j.BasicConfigurator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class JavaGrepImp implements JavaGrep{
 
   private String regex;
   private String rootPath;
   private String outFile;
+
+  final Logger logger = LoggerFactory.getLogger(JavaGrepImp.class);
+
+  public static void main(String[] args) throws IllegalAccessException {
+    
+    if (args.length < 3){
+      throw new IllegalAccessException("USAGE: JavaGrep regex rooPath outFile");
+    }
+
+    BasicConfigurator.configure();
+
+    JavaGrepImp javaGrepImp = new JavaGrepImp();
+
+    javaGrepImp.setRegex(args[0]);
+    javaGrepImp.setRootPath(args[1]);
+    javaGrepImp.setOutFile(args[2]);
+    try {
+      javaGrepImp.process();
+    } catch (Exception e) {
+      javaGrepImp.logger.error("Error: Unable to process", e);
+    }
+
+    //TO DO: the rest of this lol
+  }
 
   @Override
   public String getRegex() {
@@ -120,21 +147,4 @@ public class JavaGrepImp implements JavaGrep{
 
   }
 
-  public static void main(String[] args) throws IllegalAccessException {
-//    if (args.length < 3){
-//      throw new IllegalAccessException("USAGE: JavaGrep regex rooPath outFile");
-//    }
-    JavaGrepImp javaGrepImp = new JavaGrepImp();
-//    javaGrepImp.setRootPath("..\\..\\..\\apps");
-    javaGrepImp.setRootPath(".\\");
-    javaGrepImp.setRegex("\\d");
-    javaGrepImp.setOutFile("./out/grepout.txt");
-    try {
-      javaGrepImp.process();
-    } catch (IOException e) {
-      System.out.println(e);
-    }
-
-    //TO DO: the rest of this lol
-  }
 }
