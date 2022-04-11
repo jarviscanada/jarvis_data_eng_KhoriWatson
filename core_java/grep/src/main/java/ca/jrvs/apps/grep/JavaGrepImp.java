@@ -114,7 +114,7 @@ public class JavaGrepImp implements JavaGrep{
   }
 
   @Override
-  public List<String> readLines(File inputFile) throws IllegalArgumentException {
+  public List<String> readLines(File inputFile) throws IllegalArgumentException, IOException {
     List<String> lines = new ArrayList<String>();
     try (BufferedReader reader = new BufferedReader(new FileReader(inputFile))) {
       String line;
