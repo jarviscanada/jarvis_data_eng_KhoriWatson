@@ -23,7 +23,7 @@ public class JavaGrepImp implements JavaGrep{
   final Logger logger = LoggerFactory.getLogger(JavaGrepImp.class);
 
   public static void main(String[] args) throws IllegalAccessException {
-    
+
     if (args.length < 3){
       throw new IllegalAccessException("USAGE: JavaGrep regex rooPath outFile");
     }
