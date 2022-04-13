@@ -31,15 +31,15 @@ public class JavaGrepStreamImp implements JavaGrepStream{
 
     BasicConfigurator.configure();
 
-    JavaGrepImp javaGrepImp = new JavaGrepImp();
+    JavaGrepStreamImp javaGrepStreamImp = new JavaGrepStreamImp();
 
-    javaGrepImp.setRegex(args[0]);
-    javaGrepImp.setRootPath(args[1]);
-    javaGrepImp.setOutFile(args[2]);
+    javaGrepStreamImp.setRegex(args[0]);
+    javaGrepStreamImp.setRootPath(args[1]);
+    javaGrepStreamImp.setOutFile(args[2]);
     try {
-      javaGrepImp.process();
+      javaGrepStreamImp.process();
     } catch (Exception e) {
-      javaGrepImp.logger.error("Error: Unable to process", e);
+      javaGrepStreamImp.logger.error("Error: Unable to process", e);
     }
 
     //TO DO: the rest of this lol
