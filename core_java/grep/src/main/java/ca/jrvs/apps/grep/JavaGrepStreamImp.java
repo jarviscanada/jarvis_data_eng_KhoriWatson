@@ -77,22 +77,26 @@ public class JavaGrepStreamImp implements JavaGrepStream{
 
   @Override
   public void process() throws IOException {
-    Stream<File> listFiles = listFiles(getRootPath());
-    listFiles.flatMap(file -> {
-      try {
-        return readLines(file);
-      } catch (IOException e) {
-        e.printStackTrace();
-        return null;
-      }
-    }).filter(line -> containsPattern(line))
-        .forEach(line -> {
-          try {
-            writeToFile(line);
-          } catch (IOException e) {
-            e.printStackTrace();
-          }
-        });
+    try {
+      Stream<File> listFiles = listFiles(getRootPath());
+      listFiles.flatMap(file -> {
+            try {
+              return readLines(file);
+            } catch (IOException e) {
+              throw new RuntimeException("Failed to read from file");
+            }
+          }).filter(line -> containsPattern(line))
+          .forEach(line -> {
+            try {
+              writeToFile(line);
+            } catch (IOException e) {
+              throw new RuntimeException("Failed to write to file");
+            }
+          });
+    }
+    catch (IOException e){
+      throw new RuntimeException("Cannot read directory");
+    }
   }
 
   @Override

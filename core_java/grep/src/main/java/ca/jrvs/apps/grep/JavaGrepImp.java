@@ -142,7 +142,7 @@ public class JavaGrepImp implements JavaGrep{
         writer.newLine();
       }
     } catch (IOException e) {
-      throw e;
+      throw new IOException("ERROR: Could not write to file.");
     }
 
   }
