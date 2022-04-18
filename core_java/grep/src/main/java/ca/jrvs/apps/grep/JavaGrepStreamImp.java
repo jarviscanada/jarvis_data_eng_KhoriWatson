@@ -97,10 +97,14 @@ public class JavaGrepStreamImp implements JavaGrepStream{
 
   @Override
   public Stream<File> listFiles(String rootDir) throws IOException{
-    Path path = Paths.get(rootDir);
-    return Files.walk(path)
-        .filter(file -> Files.isRegularFile(file))
-        .map(file -> file.toFile());
+    try {
+      Path path = Paths.get(rootDir);
+      return Files.walk(path)
+          .filter(file -> Files.isRegularFile(file))
+          .map(file -> file.toFile());
+    } catch (IOException e) {
+      throw e;
+    }
   }
 
   @Override
