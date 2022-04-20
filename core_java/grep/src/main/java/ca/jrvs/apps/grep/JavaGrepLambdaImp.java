@@ -18,7 +18,7 @@ public class JavaGrepLambdaImp extends JavaGrepImp{
       throw new IllegalArgumentException("USAGE: JavaGrep regex rooPath outFile");
     }
 
-//    BasicConfigurator.configure();
+    BasicConfigurator.configure();
 
     JavaGrepLambdaImp javaGrepLambdaImp = new JavaGrepLambdaImp();
 
@@ -28,7 +28,7 @@ public class JavaGrepLambdaImp extends JavaGrepImp{
     try {
       javaGrepLambdaImp.process();
     } catch (Exception e) {
-      javaGrepLambdaImp.logger.error("Error: Unable to process", e);
+      javaGrepLambdaImp.logger.error("Error: Unable to process: ", e);
     }
 
   }
@@ -41,15 +41,18 @@ public class JavaGrepLambdaImp extends JavaGrepImp{
           .map(Path :: toFile)
           .collect(Collectors.toList());
     } catch (Exception e) {
-      System.out.println("Cannot read the file");
-      return new ArrayList<>();
+      throw new RuntimeException("Failed to list all files: ", e);
     }
   }
 
   @Override
-  public List<String> readLines(File inputFile) throws IOException {
-    Path path = inputFile.toPath();
-    return Files.lines(path).collect(Collectors.toList());
+  public List<String> readLines(File inputFile) throws IllegalArgumentException, IOException {
+    try {
+      Path path = inputFile.toPath();
+      return Files.lines(path).collect(Collectors.toList());
+    } catch (IOException e) {
+      throw new IllegalArgumentException("input file DNE or is not a regular file");
+    }
   }
 
 }

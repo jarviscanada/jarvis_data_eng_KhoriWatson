@@ -40,8 +40,6 @@ public class JavaGrepImp implements JavaGrep{
     } catch (Exception e) {
       javaGrepImp.logger.error("Error: Unable to process", e);
     }
-
-    //TO DO: the rest of this lol
   }
 
   @Override
@@ -101,7 +99,6 @@ public class JavaGrepImp implements JavaGrep{
     File dir = new File(rootDir);
     List<File> resultFiles = new ArrayList<File>();
     File[] dirContents = dir.listFiles();
-//    System.out.println(dir.isDirectory());
     for (File dirContent: dirContents) {
       if (dirContent.isDirectory()) {
         List<File> dirResults = listFiles(dirContent.toString());

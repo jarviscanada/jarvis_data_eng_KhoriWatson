@@ -1,8 +1,6 @@
 package ca.jrvs.apps.grep;
 
 import java.io.*;
-import java.nio.*;
-import java.util.List;
 import java.util.stream.Stream;
 
 public interface JavaGrepStream {

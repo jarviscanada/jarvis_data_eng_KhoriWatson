@@ -41,8 +41,6 @@ public class JavaGrepStreamImp implements JavaGrepStream{
     } catch (Exception e) {
       javaGrepStreamImp.logger.error("Error: Unable to process", e);
     }
-
-    //TO DO: the rest of this lol
   }
 
   @Override
@@ -83,19 +81,19 @@ public class JavaGrepStreamImp implements JavaGrepStream{
             try {
               return readLines(file);
             } catch (IOException e) {
-              throw new RuntimeException("Failed to read from file");
+              throw new RuntimeException("Failed to read from file: ", e);
             }
           }).filter(line -> containsPattern(line))
           .forEach(line -> {
             try {
               writeToFile(line);
             } catch (IOException e) {
-              throw new RuntimeException("Failed to write to file");
+              throw new RuntimeException("Failed to write to file: ", e);
             }
           });
     }
     catch (IOException e){
-      throw new RuntimeException("Cannot read directory");
+      throw new RuntimeException("Cannot read directory: ", e);
     }
   }
 
@@ -113,8 +111,12 @@ public class JavaGrepStreamImp implements JavaGrepStream{
 
   @Override
   public Stream<String> readLines(File inputFile) throws IllegalArgumentException, IOException {
-    Path path = inputFile.toPath();
-    return Files.lines(path);
+    try {
+      Path path = inputFile.toPath();
+      return Files.lines(path);
+    } catch (IOException e) {
+      throw new IllegalArgumentException("input file DNE or is not a regular file");
+    }
   }
 
   @Override
