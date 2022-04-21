@@ -1,0 +1,6 @@
+# Ignore all /.idea files
+**/.idea
+grep.iml
+jdbc.iml
+**/practice
+../../intellij-java-google-style.xml
