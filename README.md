@@ -4,11 +4,11 @@ Hello! My name is Khori Watson and I recently graduated from the University of T
 
 ## Skills
 
-**Proficient:** Java, Linux/Bash, RDBMS/SQL, Agile/Scrum, Git
+**Proficient:** Javascript, Linux/Bash, RDBMS/SQL, Agile/Scrum, Git
 
-**Competent:** Javascript, HTML, CSS, React, Donec
+**Competent:** Java, HTML, CSS, React, React Native
 
-**Familiar:** Python, C, fermentum, fermentum, fermentum
+**Familiar:** Python, C, R, Verilog, NoSQL Databases
 
 ## Jarvis Projects
 
@@ -19,9 +19,9 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_KhoriWatso
 
 **Core Java Apps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_KhoriWatson/tree/master/core_java)]:
       
-  - Twitter App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.
-  - JDBC App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.
-  - Grep App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.
+  - Twitter App: In progress.
+  - JDBC App: This was a simple application exploring the functionality of the Postgres JDBC driver when used to connect to a data store. It involved querying a simulated PostgreSQL database of order data to extract customer and order information as well as using transactions to ensure atomicity.
+  - Grep App: This project is a recreation of the 'grep' terminal command done in Java. It searches through all the files in a directory recursively and extracts any lines that match a user-provided regular expression and then save all those lines to a file. Two implementations of this project were written: one that leveraged pre-Java 8 features exclusively (standard Java Collecitons and File IO API) and another that introduce Java 8 features, including Java NIO, Paths, Streams, and Lambdas. The latter implementation was done to showcase how these new features (streams especially) allow us to bypass some of the limitations caused by heap sizes in the JVM.
 
 **Springboot App** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_KhoriWatson/tree/master/springboot)]: Not Started
 
@@ -35,9 +35,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_KhoriWatso
 
 
 ## Highlighted Projects
-**Web app for restaurant** [[GitHub](https://github.com/jarviscanada/jarvis_profile_builder)]: Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.
-
-**Machine Learning**: Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.
+**Community Improvement App**: This app was designed as a way to let users quickly and easily flag broken or damaged infrastructure in their community to 311 in Toronto. It made use of geolocation data to simplify the process of communicating where maintenance crews needed to go to fix each issue. This application was built using React Native and Next.js and a more of a proof of concept and was not actually connected to the 311 API for the city of Toronto, but it did access hardware GPS iniformation to provide accurate geolocation data.
 
 
 ## Professional Experiences
@@ -51,16 +49,9 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_KhoriWatso
 
 ## Education
 **University of Toronto (2016-2021)**, Bachelor of Science, Department of Computer Science
-- Scholarship
-- Dean's List (2015, 2016): Ut enim ad minim veniam
-- GPA: 3.8/4.0
-
-**XYZ university (2016-2018)**, Master of Engineering, Electrical and Computer Engineering
+- President's Entrance Scholarship
 
 
 ## Miscellaneous
-- Udacity Machine Learning (2019)
-- Winner
-- Basketball player
-- Competitive gaming
-- Volunteer, ABC Food bank: Ut enim ad minim veniam
+- Casual Gamer
+- Visual Artist
