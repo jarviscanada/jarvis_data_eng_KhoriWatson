@@ -5,7 +5,7 @@ github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_KhoriWatso
 
 # Introduce yourself, your academic and professional background.
 # What excites you about the software industry and your passion. At least 80 words
-summary: Hello! My name is Khori Watson and I recently graduated from the University of Toronto with a Bachelor's degree in Computer Science and I am passionate about software development and engineering. Throughout my undergraduate career, I fell in love with frontend and full-stack development as it was where I could exercise my passion for design and crafting seamless, joyful, user experiences! In addition to my studies in Computer Science, I also pursued a double minor in Human Geography and Statistics.
+summary: I am a recent graduate of the University of Toronto with a Bachelor's degree in Computer Science and I am passionate about software development and engineering. Throughout my undergraduate career, I fell in love with frontend and full-stack development as it was where I could exercise my passion for design and crafting seamless, joyful, user experiences. During my studies, I have worked in fast-paced, collaborative environments which also depended on close communication with external shareholders to bring their vision for their product to life. I have experience working with HTML, CSS, and Javascript and various associated frameworks such as React in addition to the work I have done in Python, Java, C, and R as a part of my degree. Besides Computer Science, during my time at the University of Toronto, I also pursued a double minor in Human Geography and Statistics.
 
 # Group your skills by level.
 # Your skills can be anything software related (e.g. language, frameworks, methodologies, software, etc.).
@@ -13,10 +13,10 @@ skills:
   # At least 5 skills
   proficient:
     - Javascript
-    - Linux/Bash
     - RDBMS/SQL
     - Agile/Scrum
     - Git
+    - Linux/Bash
   # At least 5 skills
   competent:
     - Java
@@ -38,28 +38,28 @@ jarvis_projects:
     git_url: "/linux_sql"
     # The project description allows hiring managers to understand your project and technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: This project simulates a monitoring agent that gathers data about Linux machines linked together in a cluster. It centers on 3 separate bash scripts which collectively create and control the running of a Docker container made from a lightweight Postgres Docker image and parse hardware and resource usage information via a series of commands and construct SQL statements to insert into a shared database store on a Docker volume. The script is automated via a crontab job to continuously update the database with real-time usage data.
+    description: This project is monitoring agent that gathers data about Linux machines linked together in a cluster. It centers on 3 separate bash scripts which collectively create and control the running of a Docker container made from a lightweight Postgres Docker image and parse hardware and resource usage information via a series of commands and construct SQL statements to insert into a shared database store on a Docker volume. The script is automated via a cron job to continuously update the database with real-time usage data.
   - name: "Core Java Apps"
     git_url: "/core_java"
     description:
-      - "Twitter App: In progress."
+      # - "Twitter App: In progress."
       - "JDBC App: This was a simple application exploring the functionality of the Postgres JDBC driver when used to connect to a data store. It involved querying a simulated PostgreSQL database of order data to extract customer and order information as well as using transactions to ensure atomicity."
       - "Grep App: This project is a recreation of the 'grep' terminal command done in Java. It searches through all the files in a directory recursively and extracts any lines that match a user-provided regular expression and then save all those lines to a file. Two implementations of this project were written: one that leveraged pre-Java 8 features exclusively (standard Java Collecitons and File IO API) and another that introduce Java 8 features, including Java NIO, Paths, Streams, and Lambdas. The latter implementation was done to showcase how these new features (streams especially) allow us to bypass some of the limitations caused by heap sizes in the JVM."
-  - name: "Springboot App"
-    git_url: "/springboot"
-    description: ""
-  - name: "Python Data Analytics"
-    git_url: "/python_data_anlytics"
-    description: ""
-  - name: "Hadoop"
-    git_url: "/hadoop"
-    description: ""
-  - name: "Spark"
-    git_url: "/spark"
-    description: ""
-  - name: "Cloud/DevOps"
-    git_url: "/cloud_devops"
-    description: ""
+  # - name: "Springboot App"
+  #   git_url: "/springboot"
+  #   description: ""
+  # - name: "Python Data Analytics"
+  #   git_url: "/python_data_anlytics"
+  #   description: ""
+  # - name: "Hadoop"
+  #   git_url: "/hadoop"
+  #   description: ""
+  # - name: "Spark"
+  #   git_url: "/spark"
+  #   description: ""
+  # - name: "Cloud/DevOps"
+  #   git_url: "/cloud_devops"
+  #   description: ""
 
 # List of personal or academic projects
 # Feel free to add more projects
@@ -69,7 +69,7 @@ highlighted_projects:
     #URL is optional
     # git_url: "https://github.com/jarviscanada/jarvis_profile_builder"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: "This app was designed as a way to let users quickly and easily flag broken or damaged infrastructure in their community to 311 in Toronto. It made use of geolocation data to simplify the process of communicating where maintenance crews needed to go to fix each issue. This application was built using React Native and Next.js and a more of a proof of concept and was not actually connected to the 311 API for the city of Toronto, but it did access hardware GPS iniformation to provide accurate geolocation data."
+    description: "This proof-of-concept app was designed as a way to let users quickly and easily flag broken or damaged infrastructure in their community to 311 in Toronto. It made use of geolocation data to simplify the process of communicating where maintenance crews needed to go to fix each issue. This application was built using React Native and Next.js which was used access hardware GPS iniformation to provide accurate geolocation data."
   # - name: "Machine Learning"
   #   git_url:
   #   description: Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.
@@ -120,5 +120,5 @@ others:
   #     - "Winner"
   - title: "Activities/Hobbies"
     bullets:
-      - "Casual Gamer"
+      - "I love casual gaming, in particular fighting and strategy games."
       - "Visual Artist"
